@@ -112,7 +112,14 @@ function writeStock(){
 
 }
 function feedDog(){
-  dog.addImage(happyDog);
+  gameState = 1;
+  database.ref('/').update({'gameState':gameState})
+  if(gameV===1){
+    dog.addImage(happyDog);
+    dog.scale=0.3;
+  
+  }
+
 
   //foodGGG.update(foodGGG.getState()-1);
 database.ref('/').update({
@@ -120,7 +127,13 @@ database.ref('/').update({
 })
 }
 function addFood(){
-  dog.addImage(happyDog);
+  gameState = 1;
+  database.ref('/').update({'gameState':gameState})
+  if(gameV===1){
+    dog.addImage(happyDog);
+    dog.scale=0.3;
+  
+  }
 
 
 database.ref('/').update({
